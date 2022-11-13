@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddMovieDialogBoxController">
+    <header>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 10;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@film.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="480.0" layoutY="350.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ticket.jpeg" />
+               </image>
+            </ImageView>
+            <Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: black;" />
+            <Label layoutX="25.0" layoutY="50.0" opacity="0.9" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30;" text="   Enter Movie Title :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="titleBox" layoutX="250.0" layoutY="55.0" prefHeight="40.0" prefWidth="320.0" promptText="Title" style="-fx-background-radius: 30;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="25.0" layoutY="100.0" opacity="0.8" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30;" text="   Enter Genre : " textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="genreBox" layoutX="250.0" layoutY="105.0" prefHeight="40.0" prefWidth="320.0" promptText="Genre" style="-fx-background-radius: 30;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label layoutX="25.0" layoutY="150.0" opacity="0.9" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30;" text="   Enter Release Year : " textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="releaseYearBox" layoutX="250.0" layoutY="155.0" prefHeight="40.0" prefWidth="320.0" promptText="Release Year" style="-fx-background-radius: 30;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label layoutX="25.0" layoutY="200.0" opacity="0.8" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30;" text="   Enter Running Time : " textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="530.0" layoutY="200.0" prefHeight="50.0" prefWidth="40.0" text=" min" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="durationBox" layoutX="250.0" layoutY="205.0" prefHeight="40.0" prefWidth="280.0" promptText="Running Time" style="-fx-background-radius: 30;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label layoutX="25.0" layoutY="250.0" opacity="0.9" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30;" text="   Enter Revenue :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="550.0" layoutY="250.0" prefHeight="50.0" prefWidth="20.0" text=" $" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="revenueBox" layoutX="250.0" layoutY="255.0" prefHeight="40.0" prefWidth="300.0" promptText="Revenue" style="-fx-background-radius: 30;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Label layoutX="25.0" layoutY="300.0" opacity="0.8" prefHeight="50.0" prefWidth="550.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30;" text="   Enter Budget :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="550.0" layoutY="300.0" prefHeight="50.0" prefWidth="20.0" text=" $" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="budgetBox" layoutX="250.0" layoutY="305.0" prefHeight="40.0" prefWidth="300.0" promptText="Budget" style="-fx-background-radius: 30;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <Button fx:id="resetButton" layoutX="50.0" layoutY="430.0" mnemonicParsing="false" onAction="#onResetClick" opacity="0.9" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30; -fx-border-color: white; -fx-border-width: 3; -fx-border-radius: 30;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Button>
+            <Button fx:id="confirmButton" layoutX="225.0" layoutY="430.0" mnemonicParsing="false" onAction="#onConfirmClick" opacity="0.9" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30; -fx-border-color: white; -fx-border-width: 3; -fx-border-radius: 30;" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="cancelButton" layoutX="400.0" layoutY="430.0" mnemonicParsing="false" onAction="#onCancelClick" opacity="0.9" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 30; -fx-border-width: 3; -fx-border-color: white; -fx-border-radius: 30;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Label fx:id="errorMessage" alignment="CENTER" layoutY="370.0" opacity="0.8" prefHeight="40.0" prefWidth="600.0" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children></AnchorPane>
+    </header>
+    <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+    </content>
+    <expandableContent>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+    </expandableContent>
+</DialogPane>
