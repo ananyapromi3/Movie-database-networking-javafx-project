@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomepageController">
+   <children>
+      <Button fx:id="extra" layoutX="900.0" layoutY="500.0" mnemonicParsing="false" onAction="#showHome2" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: black; -fx-background-radius: 0;" />
+      <ImageView fitHeight="205.0" fitWidth="316.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@filmr.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pCompanyLogo" fitHeight="180.0" fitWidth="200.0" layoutX="30.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@film.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="894.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pop.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="126.0" fitWidth="75.0" layoutX="12.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@coke.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="115.0" layoutX="4.0" layoutY="650.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@fries.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="productionCompanyNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="25.0" prefHeight="100.0" prefWidth="950.0" text="Production Company Name" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font></Label>
+      <Button layoutX="423.0" layoutY="108.0" mnemonicParsing="false" style="-fx-background-color: black;" />
+      <Button fx:id="mostRecentFilter" layoutX="100.0" layoutY="620.0" mnemonicParsing="false" onAction="#mostRecentMovies" opacity="0.9" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #6C1C0A; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20;" text="Most Recent Movie" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="maxRevenueButton" layoutX="330.0" layoutY="620.0" mnemonicParsing="false" onAction="#maxRevenueFilter" opacity="0.9" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #6C1C0A; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20;" text="Maximum Revenue Movie" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="totalProfitButton" layoutX="610.0" layoutY="620.0" mnemonicParsing="false" onAction="#totalProfit" opacity="0.9" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #6C1C0A; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20;" text="Show Total Profit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="850.0" layoutY="610.0" mnemonicParsing="false" onAction="#logout" opacity="0.8" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 0; -fx-background-radius: 50;">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <graphic>
+            <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sign-out.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="notFoundLabel" layoutX="400.0" layoutY="250.0" prefHeight="50.0" prefWidth="200.0" visible="false">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="100.0" layoutY="150.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: black;">
+         <children>
+            <HBox layoutY="50.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: black;">
+               <children>
+                  <ScrollPane fx:id="scrollPane" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: black;">
+                     <content>
+                        <GridPane fx:id="grid" prefHeight="70.0" prefWidth="750.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+            <TextField fx:id="searchBar" opacity="0.9" prefHeight="40.0" prefWidth="500.0" promptText=" Enter Movie Title" style="-fx-background-radius: 20; -fx-background-color: white; -fx-border-color: #6C1C0A#6C1C0A; -fx-border-radius: 20;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TextField>
+            <Button fx:id="searchButton" layoutX="500.0" mnemonicParsing="false" onAction="#onSearchClick" opacity="0.9" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: white; -fx-border-width: 1;" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="addMovie" layoutX="620.0" mnemonicParsing="false" onAction="#addMovie" opacity="0.9" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6C1C0A#6C1C0A; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20; -fx-border-width: 1;" text="Add New Movie" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="homeButton" contentDisplay="CENTER" layoutX="850.0" layoutY="50.0" mnemonicParsing="false" onAction="#showHome" opacity="0.8" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@reload.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
